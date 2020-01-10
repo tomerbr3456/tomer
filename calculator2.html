@@ -1,20 +1,15 @@
 <!DOCTYPE html> 
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="calculator2.css">
 </head>
-
 <body>
     <div class="dinamicFlexSquare">
     <div class="dinamicSquare">
         <div id="demo" class="textLine">
-
         </div>
         <div  id=demo2 class="calculateLine">
-
         </div>
-
         <div class="keyboardSquare">
             <!--<div id="digitsArea" class="keyboardSquare">-->
             <div class="keysInTheSameLine">
@@ -27,7 +22,6 @@
                 <div class="calculatorKeys">
                         <button onclick="Calculating('9','9');">9</button>
                 </div>
-
                 <div class="calculatorKeys2">
                    <button onclick="Calculating('','');">⌫</button>
                 </div>
@@ -35,7 +29,6 @@
                         <button onclick="Calculating('y','y');">c</button>
                 </div> 
             </div>
-
       <div class="keysInTheSameLine">
                 <div class="calculatorKeys">
                         <button onclick="Calculating('4','4');">4</button>
@@ -53,10 +46,7 @@
                 <div class="calculatorKeys">
                         <button onclick="Calculating(',-','-');">-</button>
                 </div> 
-
-
             </div>
-
             <div class="keysInTheSameLine">
                 <div class="calculatorKeys">
                         <button onclick="Calculating('1','1');">1</button>
@@ -83,38 +73,20 @@
                 <div class="calculatorKeys">
                     <button onclick="Calculating('.','.');">.</button>
                 </div>
-            
-
                 <div class="worthKey">
                     <button onclick="Calculating('=','=');">=</button>
                 </div>
-               
-
-                <!-- GB -->
-
-
-
-
-
-
-
-
             </div>
-            
-
         </div>
     </div>
 <script>
-
 var targilForDisplay=""
 var targil=""
 var sum = 0
 var sum2=0
-
 function Calculating(x,x2) {
     sum=0
-    sum2=0
-    
+    sum2=0   
   if(x=="")
   {
   targil=targil.substring(0,targil.length-1) 
@@ -141,56 +113,25 @@ function Calculating(x,x2) {
         
         {
             s[i]=s[i].replace(s[i].charAt(0),'')
-            sum=sum/Number(s[i])
-            
+            sum=sum/Number(s[i])      
         }
     
         else{
         s2.push(sum)
-        sum=Number(s[i])
-        
-        }
-        
+        sum=Number(s[i])      
+        }      
     }
-    s2.push(sum)
-
-        
-        
-        
-       
-      
-       
-      
+    s2.push(sum)                                                  
       i=0
       for(i;i<s2.length;i++){
           sum2+=s2[i]
-
-      }
-    
-
-      
-      
-
+      }           
   }  
-  
-  
-
-  
-
   targilForDisplay=targilForDisplay+x2;
   targil=targil+x;
   document.getElementById("demo").innerHTML = targilForDisplay;
-  document.getElementById("demo2").innerHTML = sum2;
-  
+  document.getElementById("demo2").innerHTML = sum2; 
 }
- 
-
-
-
-
-
-
 </script>
 </body>
-
 </html>
