@@ -1,0 +1,74 @@
+.dinamicSquare{  
+    background-color: white;
+    border:  10px solid black;
+    height:1400px;
+    width: 1400px;
+}
+.dinamicFlexSquare{
+    display: flex;
+    justify-content: center;
+}
+.textLine{ 
+    height: 25%;
+    width: 100%;
+    background-color: white;
+}
+.calculateLine{
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    height: 10%;
+    width: 97%;
+    background-color: white;
+    border:10px solid black
+}
+.keyboardSquare{
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 60%;
+    width: 97%;
+    background-color: white;
+    border:10px solid black
+}
+.keysInTheSameLine{
+        height:24%;
+        width: 100%;
+        display: flex;
+}
+.calculatorKeys{
+    margin-left: 1%;
+    margin-top: 5%;
+    width: 16.7%;
+    background-color: white;
+    border:10px solid black 
+}
+.calculatorKeys2{
+    margin-left: 6%;
+    margin-top: 5%;
+    width: 15%;
+    background-color: white;
+    border:10px solid black
+}
+.zeroKey{
+    margin-left: 1%;
+    margin-top: 5%;
+    width: 36%;
+    background-color: white;
+    border:10px solid black
+}
+.worthKey{
+    margin-left: 6%;
+    margin-top: 5%;
+    width: 34%;
+    background-color: white;
+    border:10px solid black
+}
+div{
+    font-size:70px;
+    text-align: center;
+}
+button{
+    font-size:70px;
+    text-align: center;
+}

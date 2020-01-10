@@ -1,0 +1,86 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="calculator3.css">
+</head>
+<body>
+    <div class="dinamicFlexSquare">
+    <div class="dinamicSquare">
+        <div id="demo" class="textLine">
+        </div>
+        <div  id=demo2 class="calculateLine">
+        </div>
+        <div class="keyboardSquare">
+            <!--<div id="digitsArea" class="keyboardSquare">-->
+            <div class="keysInTheSameLine">
+                <div class="calculatorKeys">
+                    <button onclick="Calculating('7','7');">7</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('8','8');">8</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('9','9');">9</button>
+                </div>
+                <div class="calculatorKeys2">
+                   <button onclick="Calculating('','');">⌫</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('y','y');">c</button>
+                </div> 
+            </div>
+      <div class="keysInTheSameLine">
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('4','4');">4</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('5','5');">5</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('6','6');">6</button>
+                </div>
+
+                <div class="calculatorKeys2">
+                        <button onclick="Calculating(',+','+');">+</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating(',-','-');">-</button>
+                </div> 
+            </div>
+            <div class="keysInTheSameLine">
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('1','1');">1</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('2','2');">2</button>
+                </div>
+                <div class="calculatorKeys">
+                        <button onclick="Calculating('3','3');">3</button>
+                </div>
+                    
+                <div class="calculatorKeys2">
+                    <button onclick="Calculating(',*','*');">*</button>
+                </div>
+                <div class="calculatorKeys">
+                    <button onclick="Calculating(',/','/');">/</button>
+                </div> 
+            </div>
+
+            <div class="keysInTheSameLine">
+                <div class="zeroKey">
+                    <button onclick="Calculating('0','0');">0</button>
+                </div>
+                <div class="calculatorKeys">
+                    <button onclick="Calculating('.','.');">.</button>
+                </div>
+                <div class="worthKey">
+                    <button onclick="Calculating('=','=');">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="calculator3.js"></script>
+
+</body>
+</html>
