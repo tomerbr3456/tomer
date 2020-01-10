@@ -1,23 +1,28 @@
 var targilForDisplay=""
 var targil=""
+-- מה ההבדל בין sum sum2 שיהיה שם מתאים
 var sum = 0
 var sum2=0
 // הפונקציה מקבלת קלט של תרגיל מהמשתמש ושולחת את התוצאה.
+-- לא ברור מה ההבדל בין X לX2 תן שם משמעותי
 function Calculating(x,x2) {
     sum=0
     sum2=0   
+    -- 
   if(x=="")// בודק האם המשתמש לחץ על מחיקה ואז הפונקציה תוריד את מה שנרשם אחרון
   {
-  targil=targil.substring(0,targil.length-1) 
-  targilForDisplay=targilForDisplay.substring(0,targilForDisplay.length-1)
+    הזחה targil=targil.substring(0,targil.length-1) 
+    הזחה targilForDisplay=targilForDisplay.substring(0,targilForDisplay.length-1)
   }
+    -- אם זה C למה ההשוואה לY?
   if(x=="y") // בודק האם המשתמש לוחץ על c ואז הפונקציה תאפס את התרגיל
   {
     targil=""  
     targilForDisplay="" 
   }
   else if(x=="="){// בודק האם משתמש לחץ = ואז הפונקציה תחזיר תוצאה
-      var i=0
+      var i=0 -- שם משמעותי 
+    -- s,s2 תחליף בשמות משמעותיים
      s= targil.split(',')//לוקח תרגיל סטרינג והופך אותו למערך מפוצל ע"פ * - + / 
      s2=[]
 
@@ -45,7 +50,8 @@ function Calculating(x,x2) {
       for(i;i<s2.length;i++){// מחשב את סכום המערך החדש
           sum2+=s2[i]
       }           
-  }  
+  } 
+  -- שמות לא טובים בעברית
   targilForDisplay=targilForDisplay+x2;
   targil=targil+x;
   document.getElementById("demo").innerHTML = targilForDisplay;
