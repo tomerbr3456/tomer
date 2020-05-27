@@ -78,7 +78,7 @@ public class BookShelf extends Book {
         for(int i=0;i<this.booksOnShelf.length;i++)
         {
             if(this.booksOnShelf[i]!=null)
-                System.out.println(this.booksOnShelf[i].bookName + i +"name of the book and placement");
+                System.out.println(this.booksOnShelf[i].bookName + "  " + i +"  name of the book and placement");
             else
                 System.out.println("null"+ i);
         }

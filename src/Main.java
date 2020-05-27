@@ -10,6 +10,21 @@ public class Main {
                 && Library.bookShelfList.get(LibraryPlacement).canBeAdded()==true)
             Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]=book;
     }
+    public static void addBookByName(String bookName,Library library)
+    {
+        Book book=new Book();
+        book.bookName=bookName;
+        for (int i=0;i<library.bookShelfList.size();i++)
+        {
+            for (int j=0;j<library.bookShelfList.get(i).booksOnShelf.length;j++)
+            {
+                if(library.bookShelfList.get(i).booksOnShelf[j]==null)
+                {
+                    library.bookShelfList.get(i).booksOnShelf[j]=book;
+                }
+            }
+        }
+    }
     public static void deleteBookByPlace(int BookShelfPlacement,int LibraryPlacement,Library Library)
     {
         if(Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]!=null)
@@ -119,6 +134,12 @@ public class Main {
         library.bookShelfList.add(shelf3);
         library.bookShelfList.add(shelf4);
         library.bookShelfList.add(shelf5);
+        System.out.println("Enter 1 to add book by placement");
+        System.out.println("Enter 2 to add book by name");
+        System.out.println ("Enter 3 to delete book by placement");
+        System.out.println("Enter 4 to delete book by name");
+        System.out.println("Enter 5 to sort the library");
+        System.out.println("Enter 6 to print the library");
 
         while (true) {
             System.out.println("Enter number between 1 to 6");
@@ -138,7 +159,14 @@ public class Main {
                     book.bookName = "tomerBook";
                     addBook(BookShelfPlacement, LibraryPlacement, library, book);
                 }
-            } else if (userInput == 3) {
+            }
+            else if (userInput==2)
+            {
+                System.out.println("insert BookName");
+                String bookName = myObj.next();
+                addBookByName(bookName,library);
+            }
+            else if (userInput == 3) {
                 System.out.println("enter BookShelfPlacement and LibraryPlacement");
                 String userInput6 = myObj.next();
                 String userInput7 = myObj.next();
