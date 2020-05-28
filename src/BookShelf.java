@@ -85,12 +85,16 @@ public class BookShelf extends Book {
     }
     public void sortAlphabetically()
     {
-        Arrays.sort(this.booksOnShelf,new Comparator<Book>() {
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.bookName.compareTo(o2.bookName);
-            }
-        });
+        if(this.numOfBooksOnShelf()<5)
+            System.out.println("the library isnt full");
+        else {
+            Arrays.sort(this.booksOnShelf, new Comparator<Book>() {
+                @Override
+                public int compare(Book o1, Book o2) {
+                    return o1.bookName.compareTo(o2.bookName);
+                }
+            });
+        }
     }
 
 }
