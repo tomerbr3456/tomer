@@ -4,6 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    public static void makeNewLibrary(Library library)
+    {
+        Scanner myObj = new Scanner(System.in);
+        for (int i=0;i<library.bookShelfList.size();i++)
+        {
+            if(library.bookShelfList.get(i)!=null)
+            {
+                for(int j=0;j<library.bookShelfList.get(i).booksOnShelf.length;j++)
+                {
+                    if(library.bookShelfList.get(i).booksOnShelf[j]==null)
+                    {
+                        Book book=new Book();
+                        System.out.println("enter bookname");
+                        String bookname=myObj.next();
+                        book.bookName=bookname;
+                        library.bookShelfList.get(i).booksOnShelf[j]=book;
+                    }
+                }
+            }
+        }
+    }
     public static  void addBook(int BookShelfPlacement,int LibraryPlacement,Library Library,Book book)
     {
         if(Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]==null
@@ -49,6 +70,8 @@ public class Main {
     {
         Scanner myObj = new Scanner(System.in);
         Library library=new Library();
+        Library xy=new Library();
+        makeNewLibrary(xy);
         Book a=new Book();
         Book b=new Book();
         Book c=new Book();
@@ -184,7 +207,10 @@ public class Main {
                 printLibrary(library);
             }
         }
+
+
     }
+
 
 
 

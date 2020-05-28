@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Library  extends BookShelf{
     String libraryName;
@@ -57,5 +54,26 @@ public class Library  extends BookShelf{
             this.bookShelfList.get(i).sortAlphabetically();
         }
     }
+//    public void makeNewLibrary(Library library)
+//    {
+//        Scanner myObj = new Scanner(System.in);
+//        for (int i=0;i<library.bookShelfList.size();i++)
+//        {
+//            if(library.bookShelfList.get(i)!=null)
+//            {
+//                for(int j=0;j<library.bookShelfList.get(i).booksOnShelf.length;j++)
+//                {
+//                    if(library.bookShelfList.get(i).booksOnShelf[j]==null)
+//                    {
+//                        Book book=new Book();
+//                        System.out.println("enter bookname");
+//                        String bookname=myObj.next();
+//                        book.bookName=bookname;
+//                        library.bookShelfList.get(i).booksOnShelf[j]=book;
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 }
