@@ -9,6 +9,8 @@ import java.util.List;
 public class BookShelf extends Book {
     Book [] booksOnShelf;
     int shelfId;
+    final int number_Of_Books_On_Shelf=5;
+    final int num_Of_Pages=1500;
     public int numOfBooksOnShelf()
     {
         int counter=0;
@@ -23,7 +25,7 @@ public class BookShelf extends Book {
     }
     public BookShelf()
     {
-        this.booksOnShelf=new Book [5];
+        this.booksOnShelf=new Book [number_Of_Books_On_Shelf];
 
     }
     public int getPagesOnShelf()
@@ -38,7 +40,8 @@ public class BookShelf extends Book {
     }
     public boolean canBeAdded()
     {
-        if (this.getPagesOnShelf()>1500||this.numOfBooksOnShelf()>5)
+        //final 1500
+        if (this.getPagesOnShelf()>num_Of_Pages||this.numOfBooksOnShelf()>5)
         {
             System.out.println("book cannot be added");
             return false;
@@ -59,6 +62,7 @@ public class BookShelf extends Book {
             System.out.println("this book doesnt exist");
 
     }
+
     public void deleteByBookName(String bookName)
     {
         for (int i=0;i<this.booksOnShelf.length;i++)
@@ -71,14 +75,14 @@ public class BookShelf extends Book {
     }
     public void setDefultBookShelf()
     {
-        this.shelfId=999;
+        this.shelfId=-999;
     }
     public void printBookShelf()
     {
         for(int i=0;i<this.booksOnShelf.length;i++)
         {
             if(this.booksOnShelf[i]!=null)
-                System.out.println(this.booksOnShelf[i].bookName + "  " + i +"  name of the book and placement");
+                this.booksOnShelf[i].printBook(i);
             else
                 System.out.println("null"+ i);
         }
