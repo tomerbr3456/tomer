@@ -3,11 +3,78 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 public class Main{
+=======
+public class Main {
+    public static void makeNewLibrary(Library library)
+    {
+        Scanner myObj = new Scanner(System.in);
+        for (int i=0;i<library.bookShelfList.size();i++)
+        {
+            if(library.bookShelfList.get(i)!=null)
+            {
+                for(int j=0;j<library.bookShelfList.get(i).booksOnShelf.length;j++)
+                {
+                    if(library.bookShelfList.get(i).booksOnShelf[j]==null)
+                    {
+                        Book book=new Book();
+                        System.out.println("enter bookname");
+                        String bookname=myObj.next();
+                        book.bookName=bookname;
+                        library.bookShelfList.get(i).booksOnShelf[j]=book;
+                    }
+                }
+            }
+        }
+    }
+    public static  void addBook(int BookShelfPlacement,int LibraryPlacement,Library Library,Book book)
+    {
+        if(Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]==null
+                && Library.bookShelfList.get(LibraryPlacement).canBeAdded()==true)
+            Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]=book;
+    }
+    public static void addBookByName(String bookName,Library library)
+    {
+        Book book=new Book();
+        book.bookName=bookName;
+        for (int i=0;i<library.bookShelfList.size();i++)
+        {
+            for (int j=0;j<library.bookShelfList.get(i).booksOnShelf.length;j++)
+            {
+                if(library.bookShelfList.get(i).booksOnShelf[j]==null)
+                {
+                    library.bookShelfList.get(i).booksOnShelf[j]=book;
+                }
+            }
+        }
+    }
+    public static void deleteBookByPlace(int BookShelfPlacement,int LibraryPlacement,Library Library)
+    {
+        if(Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]!=null)
+            Library.bookShelfList.get(LibraryPlacement).booksOnShelf[BookShelfPlacement]=null;
+    }
+    public static void deleteByName(String bookName,Library Library)
+    {
+        for (int i=0;i<Library.bookShelfList.size();i++)
+        {
+            Library.bookShelfList.get(i).deleteByBookName(bookName);
+        }
+    }
+    public static void printLibrary(Library Library)
+    {
+        for (int i=0;i<Library.bookShelfList.size();i++)
+        {
+            System.out.println("BookShelf number + BooksNames and Placements" +" "+ i);
+            Library.bookShelfList.get(i).printBookShelf();
+        }
+    }
+>>>>>>> tomernew
     public static void main(String[] args)
     {
         Scanner myObj = new Scanner(System.in);
         Library library=new Library();
+<<<<<<< HEAD
         ScienceBook a=new ScienceBook();
         Book b=new Book() {};
         Book c=new Book() {};
@@ -33,6 +100,35 @@ public class Main{
         Book w=new Book() {};
         Book x=new Book() {};
         Book y=new Book() {};
+=======
+        Library xy=new Library();
+        makeNewLibrary(xy);
+        Book a=new Book();
+        Book b=new Book();
+        Book c=new Book();
+        Book d=new Book();
+        Book e=new Book();
+        Book f=new Book();
+        Book g=new Book();
+        Book h=new Book();
+        Book i=new Book();
+        Book j=new Book();
+        Book k=new Book();
+        Book l=new Book();
+        Book m=new Book();
+        Book n=new Book();
+        Book o=new Book();
+        Book p=new Book();
+        Book q=new Book();
+        Book r=new Book();
+        Book s=new Book();
+        Book t=new Book();
+        Book u=new Book();
+        Book v=new Book();
+        Book w=new Book();
+        Book x=new Book();
+        Book y=new Book();
+>>>>>>> tomernew
         a.bookName="a";
         b.bookName="b";
         c.bookName="z";
@@ -143,7 +239,10 @@ public class Main{
                 library.printLibrary(library);
             }
         }
+
+
     }
+
 
 
 
